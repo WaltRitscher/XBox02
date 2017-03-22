@@ -10,7 +10,7 @@
                CompactPaneLength="60"
                DisplayMode="CompactInline"
                IsPaneOpen="False"
-               OpenPaneLength="200">
+               OpenPaneLength="200" >
         <SplitView.Pane>
             <Grid>
                 <Grid.RowDefinitions>

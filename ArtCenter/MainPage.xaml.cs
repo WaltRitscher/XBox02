@@ -34,12 +34,13 @@ namespace ArtCenter {
 
     private void DemoOneButton_Checked(object sender, RoutedEventArgs e) {
       var theFrame = (Frame)SidebarSplitView.Content;
-      // theFrame.Navigate(typeof(VideoPage));
+      theFrame.Navigate(typeof(InteractionPage));
       DemoOneButton.IsChecked = false;
     }
 
     private void DemoTwoButton_Checked(object sender, RoutedEventArgs e) {
       var theFrame = (Frame)SidebarSplitView.Content;
+  
       // theFrame.Navigate(typeof(VideoPage));
       DemoTwoButton.IsChecked = false;
     }
