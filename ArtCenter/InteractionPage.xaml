@@ -10,13 +10,13 @@
         <Grid.Resources>
             <Style TargetType="Button">
                 <Setter Property="FontSize"
-                        Value="50"  />
+                        Value="30"  />
                 <Setter Property="Margin"
                         Value="3,6" />
             </Style>
             <Style TargetType="TextBox">
                 <Setter Property="FontSize"
-                        Value="50" />
+                        Value="30" />
                 <Setter Property="Margin"
                         Value="3,6" />
             </Style>
@@ -30,7 +30,7 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="1*" />
         </Grid.RowDefinitions>
-        <TextBlock FontSize="50"
+        <TextBlock FontSize="40"
                    Foreground="Orange"
                    Text="Interaction Demo"
                    TextAlignment="Center"

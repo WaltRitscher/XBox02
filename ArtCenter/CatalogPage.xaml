@@ -11,7 +11,7 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="1*" />
         </Grid.RowDefinitions>
-        <TextBlock FontSize="90"
+        <TextBlock FontSize="40"
                    Foreground="Orange"
                    Text="Catalog"
                    TextAlignment="Center" />
