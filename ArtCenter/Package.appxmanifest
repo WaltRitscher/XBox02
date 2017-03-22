@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Name="ad14c532-030d-44ad-9d17-87ec0e455dbd" Publisher="CN=WR" Version="1.0.0.0" />
+  <Identity Name="4214D661-78EA-4E01-B2C7-E43272DABA37" Publisher="CN=Walt" Version="1.0.0.0" />
   <mp:PhoneIdentity PhoneProductId="ad14c532-030d-44ad-9d17-87ec0e455dbd" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>ArtCenter</DisplayName>
+    <DisplayName>ArtCenter2</DisplayName>
     <PublisherDisplayName>WR</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -15,7 +15,7 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="ArtCenter.App">
-      <uap:VisualElements DisplayName="Orange Valley Art Center" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="ArtCenter is a sample application for the LinkedIn Learning course." BackgroundColor="transparent">
+      <uap:VisualElements DisplayName="Orange Valley Art Center V2" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="ArtCenter2 is a sample application for the LinkedIn Learning course." BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square310x310Logo="Assets\Square310x310Logo.png" ShortName="Art Center">
           <uap:ShowNameOnTiles>
             <uap:ShowOn Tile="square310x310Logo" />
