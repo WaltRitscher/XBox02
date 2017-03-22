@@ -40,8 +40,8 @@ namespace ArtCenter {
 
     private void DemoTwoButton_Checked(object sender, RoutedEventArgs e) {
       var theFrame = (Frame)SidebarSplitView.Content;
-  
-      // theFrame.Navigate(typeof(VideoPage));
+
+      theFrame.Navigate(typeof(KeepPointerPage));
       DemoTwoButton.IsChecked = false;
     }
 

@@ -102,6 +102,9 @@
     <Compile Include="InteractionPage.xaml.cs">
       <DependentUpon>InteractionPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="KeepPointerPage.xaml.cs">
+      <DependentUpon>KeepPointerPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -134,6 +137,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="InteractionPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="KeepPointerPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
