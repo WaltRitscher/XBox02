@@ -46,15 +46,7 @@ namespace ArtCenter.Models {
       return new ObservableCollection<Workshop>(q); ;
 
     }
-    public List<string> GetTopics() {
-      var topics = new List<string>();
-      topics.Add("Art");
-      topics.Add("Classes");
-      topics.Add("Workshops");
-
-
-      return topics;
-    }
+    
 
   }
 }
