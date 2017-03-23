@@ -26,7 +26,7 @@ namespace ArtCenter {
     /// </summary>
     public App() {
       this.InitializeComponent();
-      // this.RequiresPointerMode = Windows.UI.Xaml.ApplicationRequiresPointerMode.WhenRequested;
+       this.RequiresPointerMode = Windows.UI.Xaml.ApplicationRequiresPointerMode.WhenRequested;
       this.Suspending += OnSuspending;
     }
 
@@ -59,7 +59,7 @@ namespace ArtCenter {
         }
 
         // Place the frame in the current Window
-        Window.Current.Content = new MainPage(rootFrame);
+        Window.Current.Content = new GamePadPage();
       }
 
       if (e.PrelaunchActivated == false)
@@ -69,7 +69,7 @@ namespace ArtCenter {
           // When the navigation stack isn't restored navigate to the first page,
           // configuring the new page by passing required information as a navigation
           // parameter
-          rootFrame.Navigate(typeof(CatalogPage), e.Arguments);
+         // rootFrame.Navigate(typeof(CatalogPage), e.Arguments);
         }
         // Ensure the current window is active
         Window.Current.Activate();

@@ -99,11 +99,8 @@
     <Compile Include="CatalogPage.xaml.cs">
       <DependentUpon>CatalogPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="InteractionPage.xaml.cs">
-      <DependentUpon>InteractionPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="KeepPointerPage.xaml.cs">
-      <DependentUpon>KeepPointerPage.xaml</DependentUpon>
+    <Compile Include="GamePadPage.xaml.cs">
+      <DependentUpon>GamePadPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -121,6 +118,7 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\ControllerButtons.png" />
     <Content Include="Assets\OV_Splash.png" />
     <Content Include="Assets\OV_Splash2.png" />
     <Content Include="Assets\Square310x310Logo.scale-100.png" />
@@ -136,11 +134,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="InteractionPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="KeepPointerPage.xaml">
+    <Page Include="GamePadPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
