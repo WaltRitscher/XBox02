@@ -28,7 +28,8 @@ namespace ArtCenter.Models
       var client = new HttpClient();
       HttpResponseMessage response = await client.GetAsync(new Uri("http://orangevalleycaa.org/api/videos/"));
       var jsonString = await response.Content.ReadAsStringAsync();
-      ObservableCollection<Workshop> workshops = JsonConvert.DeserializeObject<ObservableCollection<Workshop>>(jsonString);
+      ObservableCollection<Workshop> workshops = 
+						JsonConvert.DeserializeObject<ObservableCollection<Workshop>>(jsonString);
       _workshops = workshops;
     }
 
