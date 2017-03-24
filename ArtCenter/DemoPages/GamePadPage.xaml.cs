@@ -14,10 +14,10 @@ namespace ArtCenter
     {
       this.InitializeComponent();
 
-      this.KeyDown += GamePadPage_KeyDown;
+      this.KeyUp += GamePadPage_KeyUp;
     }
 
-    private void GamePadPage_KeyDown(object sender, KeyRoutedEventArgs e)
+    private void GamePadPage_KeyUp(object sender, KeyRoutedEventArgs e)
     {
       if (e.Handled)
       {

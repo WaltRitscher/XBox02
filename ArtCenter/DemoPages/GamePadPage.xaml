@@ -47,8 +47,8 @@
                 Grid.RowSpan="2"
                 Grid.Column="1"
                 Grid.ColumnSpan="2" VerticalAlignment="Bottom"
-                Source="Assets/ControllerButtons.png"
-                Margin="20,0,0,3" />
+            Source="ms-appx:///Assets/ControllerButtons.png"
+            Margin="20,0,0,3" />
         <StackPanel Orientation="Horizontal"
                     Grid.Row="3"
                     Grid.ColumnSpan="2">
