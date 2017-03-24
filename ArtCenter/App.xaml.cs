@@ -26,8 +26,8 @@ namespace ArtCenter {
     /// </summary>
     public App() {
       this.InitializeComponent();
-      // this.RequiresPointerMode = Windows.UI.Xaml.ApplicationRequiresPointerMode.WhenRequested;
-      this.Suspending += OnSuspending;
+			//this.RequiresPointerMode = Windows.UI.Xaml.ApplicationRequiresPointerMode.WhenRequested;
+			this.Suspending += OnSuspending;
     }
 
     /// <summary>

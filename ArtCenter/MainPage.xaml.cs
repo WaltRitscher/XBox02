@@ -47,7 +47,7 @@ namespace ArtCenter {
 
     private void DemoThreeButton_Checked(object sender, RoutedEventArgs e) {
       var theFrame = (Frame)SidebarSplitView.Content;
-      // theFrame.Navigate(typeof(VideoPage));
+      theFrame.Navigate(typeof(BrowserPage));
       DemoThreeButton.IsChecked = false;
     }
   }
