@@ -25,7 +25,7 @@ namespace ArtCenter
     public KeepPointerPage()
     {
       this.InitializeComponent();
-      RequiresPointer = RequiresPointer.WhenFocused;
+      //RequiresPointer = RequiresPointer.WhenFocused;
     }
   }
 }
