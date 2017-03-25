@@ -96,11 +96,11 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DemoPages\OtherButtonsPage.xaml.cs">
+      <DependentUpon>OtherButtonsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="StandardPages\CatalogPage.xaml.cs">
       <DependentUpon>CatalogPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="DemoPages\GamePadPage.xaml.cs">
-      <DependentUpon>GamePadPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="StandardPages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -130,11 +130,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="StandardPages\CatalogPage.xaml">
+    <Page Include="DemoPages\OtherButtonsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="DemoPages\GamePadPage.xaml">
+    <Page Include="StandardPages\CatalogPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
