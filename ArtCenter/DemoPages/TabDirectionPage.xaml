@@ -35,7 +35,7 @@
         </Grid.Resources>
         <TextBlock FontSize="40"
                    Foreground="Orange"
-                   Text="Tab Direction"
+                   Text="XY Focus Navigation"
                    TextAlignment="Center"
                    Grid.ColumnSpan="3" />
 
