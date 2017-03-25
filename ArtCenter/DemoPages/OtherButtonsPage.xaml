@@ -6,39 +6,39 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="1*" />
-            <RowDefinition Height="1*" />
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="1*" />
-        </Grid.ColumnDefinitions>
-        <Grid x:Name="SpriteGrid1"
-              Grid.Column="0"
-              Grid.Row="1">
-            <Grid.Projection>
-                <PlaneProjection x:Name="Projection1" />
-            </Grid.Projection>
-            <Image Source="ms-appx:///Assets/Robot01.png" />
+  <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="1*" />
+      <RowDefinition Height="1*" />
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="1*" />
+      <ColumnDefinition Width="1*" />
+    </Grid.ColumnDefinitions>
+    <Grid x:Name="SpriteGrid1"
+          Grid.Column="0"
+          Grid.Row="1">
+      <Grid.Projection>
+        <PlaneProjection x:Name="Projection1" />
+      </Grid.Projection>
+      <Image Source="ms-appx:///Assets/Robot01.png" />
 
-            <Grid.RenderTransform>
-                <CompositeTransform x:Name="Transform1"
-                                    ScaleX="0.8"
-                                    ScaleY="0.8" />
-            </Grid.RenderTransform>
-        </Grid>
-        <Grid x:Name="SpriteGrid2"
-              Grid.Column="1"
-              VerticalAlignment="Bottom"
-              Grid.Row="1">
-            <Image Source="ms-appx:///Assets/Robot02.png" />
-            <Grid.RenderTransform>
-                <CompositeTransform x:Name="Transform2"
-                                    ScaleX="0.8"
-                                    ScaleY="0.8" />
-            </Grid.RenderTransform>
-        </Grid>
+      <Grid.RenderTransform>
+        <CompositeTransform x:Name="Transform1"
+                            ScaleX="0.8"
+                            ScaleY="0.8" />
+      </Grid.RenderTransform>
     </Grid>
+    <Grid x:Name="SpriteGrid2"
+          Grid.Column="1"
+          VerticalAlignment="Bottom"
+          Grid.Row="1">
+      <Image Source="ms-appx:///Assets/Robot02.png" />
+      <Grid.RenderTransform>
+        <CompositeTransform x:Name="Transform2"
+                            ScaleX="0.8"
+                            ScaleY="0.8" />
+      </Grid.RenderTransform>
+    </Grid>
+  </Grid>
 </Page>
