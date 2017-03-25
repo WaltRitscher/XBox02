@@ -15,33 +15,13 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace ArtCenter {
+namespace ArtCenter.DemoPages {
   /// <summary>
   /// An empty page that can be used on its own or navigated to within a Frame.
   /// </summary>
-  public sealed partial class TabDirectionPage : Page {
-    public TabDirectionPage() {
+  public sealed partial class UnderstandSizesPage : Page {
+    public UnderstandSizesPage() {
       this.InitializeComponent();
-    }
-
-   
-
-   
-
-    private void Button_Click(object sender, RoutedEventArgs e) {
-      var currentButton = sender as Button;
-      this.ResetButton.Focus(FocusState.Programmatic);
-      if (currentButton != null)
-      {
-        currentButton.Visibility = Visibility.Collapsed;
-      }
-    }
-
-    private void ResetButton_Click(object sender, RoutedEventArgs e) {
-      foreach (Button item in MainGrid.Children.OfType<Button>())
-      {
-        item.Visibility = Visibility.Visible;
-      }
     }
   }
 }

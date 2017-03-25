@@ -59,7 +59,7 @@ namespace ArtCenter {
         }
 
         // Place the frame in the current Window
-        Window.Current.Content = new TabDirectionPage();
+        Window.Current.Content = new DemoPages.UnderstandSizesPage();
       }
 
       if (e.PrelaunchActivated == false)
