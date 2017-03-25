@@ -43,11 +43,17 @@ namespace ArtCenter {
     }
 
     private void ResetButton_Click(object sender, RoutedEventArgs e) {
-      FirstButton.Focus(FocusState.Programmatic);
+      
       foreach (Button item in MainGrid.Children.OfType<Button>())
       {
         item.Visibility = Visibility.Visible;
       }
-    }
-  }
+			FirstButton.Focus(FocusState.Programmatic);
+		}
+
+		private void MoveToIsolatedButton_Click(object sender, RoutedEventArgs e) {
+			IsolatedButton.Focus(FocusState.Programmatic);
+		}
+	}
+
 }
