@@ -30,14 +30,20 @@ namespace ArtCenter {
 
     private void Button_Click(object sender, RoutedEventArgs e) {
       var currentButton = sender as Button;
-      this.ResetButton.Focus(FocusState.Programmatic);
-      if (currentButton != null)
-      {
-        currentButton.Visibility = Visibility.Collapsed;
-      }
+      currentButton.Visibility = Visibility.Collapsed;
+      var nextButton = GetNextTab(currentButton.TabIndex);
+      nextButton.Focus(FocusState.Programmatic);
+    }
+
+    private Button GetNextTab(int tabIndex) {
+      var q = from b in MainGrid.Children.OfType<Button>()
+              where b.TabIndex == tabIndex + 1
+              select b;
+      return q.First();
     }
 
     private void ResetButton_Click(object sender, RoutedEventArgs e) {
+      FirstButton.Focus(FocusState.Programmatic);
       foreach (Button item in MainGrid.Children.OfType<Button>())
       {
         item.Visibility = Visibility.Visible;

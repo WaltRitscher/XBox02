@@ -31,6 +31,8 @@
                         Value="200" />
                 <Setter Property="Padding"
                         Value="10" />
+                <Setter Property="FontFamily"
+                        Value="Segoe UI Symbol" />
             </Style>
         </Grid.Resources>
         <TextBlock FontSize="40"
@@ -39,62 +41,64 @@
                    TextAlignment="Center"
                    Grid.ColumnSpan="3" />
 
-        <Button Grid.Row="1"
+        <Button x:Name="FirstButton"
+                Grid.Row="1"
                 Grid.Column="0"
-                Content="January"
-                Click="Button_Click" />
+                Content="▼"
+                Click="Button_Click" TabIndex="1"/>
         <Button Grid.Row="1"
                 Grid.Column="1"
-                Content="February"
-                Click="Button_Click" />
+                Content="▶"
+                Click="Button_Click" TabIndex="4"/>
         <Button Grid.Row="1"
                 Grid.Column="2"
-                Content="March"
-                Click="Button_Click" />
+                Content="▼"
+                Click="Button_Click" TabIndex="5" />
 
         <Button Grid.Row="2"
                 Grid.Column="0"
-                Content="April"
-                Click="Button_Click" />
+                Content="▶"
+                Click="Button_Click" TabIndex="2"/>
         <Button Grid.Row="2"
                 Grid.Column="1"
-                Content="May"
-                Click="Button_Click" />
+                Content="▲"
+                Click="Button_Click" TabIndex="3"/>
         <Button Grid.Row="2"
                 Grid.Column="2"
-                Content="June"
-                Click="Button_Click" />
+                Content="▼"
+                Click="Button_Click" TabIndex="6"/>
 
         <Button Grid.Row="3"
                 Grid.Column="0"
-                Content="July"
-                Click="Button_Click" />
+                Content="▼"
+                Click="Button_Click" TabIndex="9"/>
         <Button Grid.Row="3"
                 Grid.Column="1"
-                Content="August"
-                Click="Button_Click" />
+                Content="◀"
+                Click="Button_Click" TabIndex="8"/>
         <Button Grid.Row="3"
                 Grid.Column="2"
-                Content="September"
-                Click="Button_Click" />
+                Content="◀"
+                Click="Button_Click" TabIndex="7"
+                 />
 
         <Button Grid.Row="4"
                 Grid.Column="0"
-                Content="October"
-                Click="Button_Click" />
+                Content="▶"
+                Click="Button_Click" TabIndex="10"/>
         <Button Grid.Row="4"
                 Grid.Column="1"
-                Content="November"
-                Click="Button_Click" />
+                Content="▶"
+                Click="Button_Click" TabIndex="11"/>
         <Button x:Name="DecemberButton"
                 Grid.Row="4"
                 Grid.Column="2"
-                Content="December"
-                Click="Button_Click" />
+                Content="▶"
+                Click="Button_Click" TabIndex="12" />
         <Button x:Name="ResetButton"
                 Grid.Row="5"
                 Grid.Column="2"
-                Content="Reset"
-                Click="ResetButton_Click" />
+                Content="Set Focus #1"
+                Click="ResetButton_Click" TabIndex="13"/>
     </Grid>
 </Page>

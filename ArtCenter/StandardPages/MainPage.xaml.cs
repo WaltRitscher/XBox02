@@ -41,7 +41,6 @@ namespace ArtCenter {
 
     private void DemoTwoButton_Checked(object sender, RoutedEventArgs e) {
       var theFrame = (Frame)SidebarSplitView.Content;
-      theFrame.Navigate(typeof(TabDirection2Page));
       
       DemoTwoButton.IsChecked = false;
     }
