@@ -3,6 +3,7 @@ using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
+using Windows.UI.Xaml.Input;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -22,24 +23,32 @@ namespace ArtCenter {
       // for global event
       // use CoreWindow class.
       // Represents the Windows Store app with input events and basic user interface behaviors.
-      CoreWindow.GetForCurrentThread().KeyUp += MainPage_KeyUp;
-
+      CoreWindow.GetForCurrentThread().KeyUp += CoreWindow_KeyUp;
+			
     }
 
-    private async void MainPage_Loaded(object sender, RoutedEventArgs e) {
+		
+
+		private async void MainPage_Loaded(object sender, RoutedEventArgs e) {
       var dataSource = await Models.WorkshopDataSource.CreateAsync();
       CategoryListbox.DataContext = dataSource.GetCategories();
     }
 		
-    private void MainPage_KeyUp(CoreWindow sender, KeyEventArgs e) {
+    private void CoreWindow_KeyUp(CoreWindow sender, KeyEventArgs e) {
       if (e.VirtualKey == Windows.System.VirtualKey.GamepadY)
       {
         FlyoutBase.ShowAttachedFlyout(SidebarSplitView);
       }
-		
     }
 
-    private void MenuButton_Checked(object sender, RoutedEventArgs e) {
+		private void MainPage_KeyUp(object sender, KeyRoutedEventArgs e) {
+			if (e.Key == Windows.System.VirtualKey.GamepadY)
+			{
+				// KeyRoutedEventArgs is different from KeyEventArgs
+			}
+		}
+
+		private void MenuButton_Checked(object sender, RoutedEventArgs e) {
       SidebarSplitView.IsPaneOpen = true;
       LogoText.Visibility = Visibility.Visible;
     }
