@@ -44,5 +44,12 @@ namespace ArtCenter.Models
               select w;
       return new ObservableCollection<Workshop>(q); ;
     }
+
+    public ObservableCollection<String> GetCategories() {
+      var q = from w in GetWorkshops()
+              orderby w.Category descending
+              select w.Category;
+      return new ObservableCollection<String>(q.Distinct()); ;
+    }
   }
 }

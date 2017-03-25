@@ -10,15 +10,31 @@
                CompactPaneLength="60"
                DisplayMode="CompactInline"
                IsPaneOpen="False"
-               OpenPaneLength="200" >
+               OpenPaneLength="200">
+        <FlyoutBase.AttachedFlyout>
+            <Flyout>
+                <StackPanel>
+                    <TextBlock FontSize="40"
+                               Text="Video Search" />
+                    
+                    <ListBox x:Name="CategoryListbox"
+                             ItemsSource="{Binding}"></ListBox>
+                </StackPanel>
+            </Flyout>
+        </FlyoutBase.AttachedFlyout>
         <SplitView.Pane>
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="1*" />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
-                <StackPanel HorizontalAlignment="Left">
 
+                <StackPanel HorizontalAlignment="Left">
+                    <FlyoutBase.AttachedFlyout>
+                        <Flyout>
+                            <TextBlock Text="Would you like to search for a video?" />
+                        </Flyout>
+                    </FlyoutBase.AttachedFlyout>
                     <ToggleButton x:Name="MenuButton"
                                   MinWidth="200"
                                   HorizontalAlignment="Left"

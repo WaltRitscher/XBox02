@@ -1,5 +1,8 @@
-﻿using Windows.UI.Xaml;
+﻿using Windows.UI.Core;
+using Windows.UI.Popups;
+using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Controls.Primitives;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -14,6 +17,36 @@ namespace ArtCenter {
       this.InitializeComponent();
 
       this.SidebarSplitView.Content = frame;
+      this.Loaded += MainPage_Loaded;
+
+      // for global event
+      // use CoreWindow class.
+      // Represents the Windows Store app with input events and basic user interface behaviors.
+      CoreWindow.GetForCurrentThread().KeyUp += MainPage_KeyUp;
+      Window.Current.CoreWindow.Dispatcher.AcceleratorKeyActivated += Dispatcher_AcceleratorKeyActivated; ;
+
+      
+      
+    }
+
+    private async void MainPage_Loaded(object sender, RoutedEventArgs e) {
+      var dataSource = await Models.WorkshopDataSource.CreateAsync();
+      CategoryListbox.DataContext = dataSource.GetCategories();
+    }
+
+    private void Dispatcher_AcceleratorKeyActivated(CoreDispatcher sender, AcceleratorKeyEventArgs e) {
+      //if (e.VirtualKey == Windows.System.VirtualKey.GamepadY)
+      //{
+      //  FlyoutBase.ShowAttachedFlyout(SidebarSplitView);
+      //}
+    }
+
+    private void MainPage_KeyUp(CoreWindow sender, KeyEventArgs e) {
+      if (e.VirtualKey == Windows.System.VirtualKey.GamepadY)
+      {
+        FlyoutBase.ShowAttachedFlyout(SidebarSplitView);
+      }
+
     }
 
     private void MenuButton_Checked(object sender, RoutedEventArgs e) {
@@ -50,5 +83,7 @@ namespace ArtCenter {
       theFrame.Navigate(typeof(BrowserPage));
       DemoThreeButton.IsChecked = false;
     }
+
+
   }
 }
