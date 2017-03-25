@@ -59,7 +59,7 @@ namespace ArtCenter {
         }
 
         // Place the frame in the current Window
-        Window.Current.Content = new GamePadPage();
+        Window.Current.Content = new DemoPages.OtherButtonsPage();
       }
 
       if (e.PrelaunchActivated == false)

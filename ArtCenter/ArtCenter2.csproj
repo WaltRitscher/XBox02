@@ -121,6 +121,8 @@
     <Content Include="Assets\ControllerButtons.png" />
     <Content Include="Assets\OV_Splash.png" />
     <Content Include="Assets\OV_Splash2.png" />
+    <Content Include="Assets\Robot01.png" />
+    <Content Include="Assets\Robot02.png" />
     <Content Include="Assets\Square310x310Logo.scale-100.png" />
     <Content Include="Assets\Square310x310Logo.scale-200.png" />
     <Content Include="Properties\Default.rd.xml" />

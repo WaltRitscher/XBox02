@@ -35,7 +35,7 @@ namespace ArtCenter {
     private void DemoOneButton_Checked(object sender, RoutedEventArgs e) {
       var theFrame = (Frame)SidebarSplitView.Content;
 
-      theFrame.Navigate(typeof(GamePadPage));
+    
       DemoOneButton.IsChecked = false;
     }
 

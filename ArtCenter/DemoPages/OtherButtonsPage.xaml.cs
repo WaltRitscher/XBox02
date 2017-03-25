@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -22,6 +23,42 @@ namespace ArtCenter.DemoPages {
   public sealed partial class OtherButtonsPage : Page {
     public OtherButtonsPage() {
       this.InitializeComponent();
+      CoreWindow.GetForCurrentThread().KeyUp += OtherButtonsPage_KeyUp;
+    }
+    private const double Distance = 18;
+    private void OtherButtonsPage_KeyUp(CoreWindow sender, KeyEventArgs args) {
+      switch (args.VirtualKey)
+      {
+        case Windows.System.VirtualKey.None:
+          break;
+        case Windows.System.VirtualKey.GamepadRightThumbstickUp:
+          Transform2.TranslateY -= Distance;
+          break;
+        case Windows.System.VirtualKey.GamepadRightThumbstickDown:
+          Transform2.TranslateY += Distance;
+          break;
+        case Windows.System.VirtualKey.GamepadRightThumbstickLeft:
+          Transform2.TranslateX -= Distance;
+          break;
+        case Windows.System.VirtualKey.GamepadRightThumbstickRight:
+          Transform2.TranslateX += Distance;
+          break;
+        case Windows.System.VirtualKey.GamepadLeftShoulder:
+          Projection1.RotationZ += Distance;
+          break;
+        case Windows.System.VirtualKey.GamepadRightShoulder:
+          Projection1.RotationZ -= Distance;
+          break;
+        case Windows.System.VirtualKey.GamepadLeftTrigger:
+          Projection1.RotationY += Distance;
+          break;
+        case Windows.System.VirtualKey.GamepadRightTrigger:
+          Projection1.RotationY -= Distance;
+          break;
+
+        default:
+          break;
+      }
     }
   }
 }
