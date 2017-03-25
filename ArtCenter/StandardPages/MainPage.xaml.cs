@@ -23,30 +23,20 @@ namespace ArtCenter {
       // use CoreWindow class.
       // Represents the Windows Store app with input events and basic user interface behaviors.
       CoreWindow.GetForCurrentThread().KeyUp += MainPage_KeyUp;
-      Window.Current.CoreWindow.Dispatcher.AcceleratorKeyActivated += Dispatcher_AcceleratorKeyActivated; ;
 
-      
-      
     }
 
     private async void MainPage_Loaded(object sender, RoutedEventArgs e) {
       var dataSource = await Models.WorkshopDataSource.CreateAsync();
       CategoryListbox.DataContext = dataSource.GetCategories();
     }
-
-    private void Dispatcher_AcceleratorKeyActivated(CoreDispatcher sender, AcceleratorKeyEventArgs e) {
-      //if (e.VirtualKey == Windows.System.VirtualKey.GamepadY)
-      //{
-      //  FlyoutBase.ShowAttachedFlyout(SidebarSplitView);
-      //}
-    }
-
+		
     private void MainPage_KeyUp(CoreWindow sender, KeyEventArgs e) {
       if (e.VirtualKey == Windows.System.VirtualKey.GamepadY)
       {
         FlyoutBase.ShowAttachedFlyout(SidebarSplitView);
       }
-
+		
     }
 
     private void MenuButton_Checked(object sender, RoutedEventArgs e) {
