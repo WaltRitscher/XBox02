@@ -49,7 +49,7 @@ namespace ArtCenter.Models
       var q = from w in GetWorkshops()
               orderby w.Category descending
               select w.Category;
-      return new ObservableCollection<String>(q.Distinct()); ;
+      return new ObservableCollection<String>(q.Distinct()); 
     }
   }
 }
