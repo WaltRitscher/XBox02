@@ -1,13 +1,100 @@
-﻿<Page
-    x:Class="ArtCenter.TabDirectionPage"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:ArtCenter"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+﻿<Page x:Class="ArtCenter.TabDirectionPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:ArtCenter"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid x:Name="MainGrid"
+          Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Grid.Resources>
+            <Style TargetType="Button">
+                <Setter Property="FontSize"
+                        Value="30" />
+                <Setter Property="HorizontalAlignment"
+                        Value="Center" />
+                <Setter Property="MinWidth"
+                        Value="200" />
+                <Setter Property="Padding"
+                        Value="10" />
+            </Style>
+        </Grid.Resources>
+        <TextBlock FontSize="40"
+                   Foreground="Orange"
+                   Text="Tab Direction"
+                   TextAlignment="Center"
+                   Grid.ColumnSpan="3" />
 
+        <Button Grid.Row="1"
+                Grid.Column="0"
+                Content="January"
+                Click="Button_Click" />
+        <Button Grid.Row="1"
+                Grid.Column="1"
+                Content="February"
+                Click="Button_Click" />
+        <Button Grid.Row="1"
+                Grid.Column="2"
+                Content="March"
+                Click="Button_Click" />
+
+        <Button Grid.Row="2"
+                Grid.Column="0"
+                Content="April"
+                Click="Button_Click" />
+        <Button Grid.Row="2"
+                Grid.Column="1"
+                Content="May"
+                Click="Button_Click" />
+        <Button Grid.Row="2"
+                Grid.Column="2"
+                Content="June"
+                Click="Button_Click" />
+
+        <Button Grid.Row="3"
+                Grid.Column="0"
+                Content="July"
+                Click="Button_Click" />
+        <Button Grid.Row="3"
+                Grid.Column="1"
+                Content="August"
+                Click="Button_Click" />
+        <Button Grid.Row="3"
+                Grid.Column="2"
+                Content="September"
+                Click="Button_Click" />
+
+        <Button Grid.Row="4"
+                Grid.Column="0"
+                Content="October"
+                Click="Button_Click" />
+        <Button Grid.Row="4"
+                Grid.Column="1"
+                Content="November"
+                Click="Button_Click" />
+        <Button x:Name="DecemberButton"
+                Grid.Row="4"
+                Grid.Column="2"
+                Content="December"
+                Click="Button_Click" />
+        <Button x:Name="ResetButton"
+                Grid.Row="5"
+                Grid.Column="2"
+                Content="Reset"
+                Click="ResetButton_Click" />
     </Grid>
 </Page>

@@ -23,5 +23,25 @@ namespace ArtCenter {
     public TabDirectionPage() {
       this.InitializeComponent();
     }
+
+   
+
+   
+
+    private void Button_Click(object sender, RoutedEventArgs e) {
+      var currentButton = sender as Button;
+      this.ResetButton.Focus(FocusState.Programmatic);
+      if (currentButton != null)
+      {
+        currentButton.Visibility = Visibility.Collapsed;
+      }
+    }
+
+    private void ResetButton_Click(object sender, RoutedEventArgs e) {
+      foreach (Button item in MainGrid.Children.OfType<Button>())
+      {
+        item.Visibility = Visibility.Visible;
+      }
+    }
   }
 }
