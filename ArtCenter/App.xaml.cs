@@ -26,8 +26,17 @@ namespace ArtCenter {
     /// </summary>
     public App() {
       this.InitializeComponent();
-       this.RequiresPointerMode = Windows.UI.Xaml.ApplicationRequiresPointerMode.WhenRequested;
+      this.RequiresPointerMode = Windows.UI.Xaml.ApplicationRequiresPointerMode.WhenRequested;
       this.Suspending += OnSuspending;
+      if (IsRunningOnXbox())
+      {
+        RequestedTheme = ApplicationTheme.Dark;
+      }
+      else
+      {
+        RequestedTheme = ApplicationTheme.Light;
+      }
+    
     }
 
     /// <summary>
@@ -59,7 +68,7 @@ namespace ArtCenter {
         }
 
         // Place the frame in the current Window
-        Window.Current.Content = new DemoPages.UnderstandSizesPage();
+        Window.Current.Content = new DemoPages.TriggerExamplePage();
       }
 
       if (e.PrelaunchActivated == false)
@@ -96,6 +105,11 @@ namespace ArtCenter {
       var deferral = e.SuspendingOperation.GetDeferral();
       //TODO: Save application state and stop any background activity
       deferral.Complete();
+    }
+
+    internal bool IsRunningOnXbox() {
+      return Windows.System.Profile.AnalyticsInfo.VersionInfo.DeviceFamily == "Windows.Xbox";
+
     }
   }
 }
