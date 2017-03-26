@@ -8,6 +8,18 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="612*" />
+        </Grid.RowDefinitions>
+        <TextBlock FontSize="40"
+                   Foreground="Orange"
+                   Text="Determine Device"
+                   TextAlignment="Center" />
+        <TextBlock x:Name="DeviceTextBlock"
+                   FontSize="30"
+                   TextAlignment="Center"
+                   Grid.Row="1" />
     </Grid>
 </Page>

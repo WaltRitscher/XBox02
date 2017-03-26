@@ -22,6 +22,7 @@ namespace ArtCenter.DemoPages {
   public sealed partial class UseTriggerPage : Page {
     public UseTriggerPage() {
       this.InitializeComponent();
+      DeviceTextBlock.Text = Windows.System.Profile.AnalyticsInfo.VersionInfo.DeviceFamily;
     }
   }
 }
