@@ -17,7 +17,8 @@
                    Text="Determine Device"
                    TextAlignment="Center" />
         <TextBlock x:Name="DeviceTextBlock"
-                   FontSize="40"
-                   TextAlignment="Center" />
+                   FontSize="30"
+                   TextAlignment="Center"
+                   Grid.Row="1" />
     </Grid>
 </Page>
