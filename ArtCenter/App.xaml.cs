@@ -1,25 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
 namespace ArtCenter {
+
   /// <summary>
   /// Provides application-specific behavior to supplement the default Application class.
   /// </summary>
   sealed partial class App : Application {
+
     /// <summary>
     /// Initializes the singleton application object.  This is the first line of authored code
     /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -29,15 +21,6 @@ namespace ArtCenter {
       this.RequiresPointerMode = Windows.UI.Xaml.ApplicationRequiresPointerMode.WhenRequested;
       this.Suspending += OnSuspending;
       //Windows.UI.ViewManagement.ApplicationViewScaling.TrySetDisableLayoutScaling(true);
-      if (IsRunningOnXbox())
-      {
-        RequestedTheme = ApplicationTheme.Dark;
-      }
-      else
-      {
-        RequestedTheme = ApplicationTheme.Light;
-      }
-    
     }
 
     /// <summary>
@@ -91,7 +74,7 @@ namespace ArtCenter {
     /// </summary>
     /// <param name="sender">The Frame which failed navigation</param>
     /// <param name="e">Details about the navigation failure</param>
-    void OnNavigationFailed(object sender, NavigationFailedEventArgs e) {
+    private void OnNavigationFailed(object sender, NavigationFailedEventArgs e) {
       throw new Exception("Failed to load Page " + e.SourcePageType.FullName);
     }
 
@@ -106,11 +89,6 @@ namespace ArtCenter {
       var deferral = e.SuspendingOperation.GetDeferral();
       //TODO: Save application state and stop any background activity
       deferral.Complete();
-    }
-
-    internal bool IsRunningOnXbox() {
-      return Windows.System.Profile.AnalyticsInfo.VersionInfo.DeviceFamily == "Windows.Xbox";
-
     }
   }
 }
