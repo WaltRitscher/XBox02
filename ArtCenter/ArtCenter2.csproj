@@ -102,6 +102,9 @@
     <Compile Include="DemoPages\UnderstandSizes.xaml.cs">
       <DependentUpon>UnderstandSizes.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DemoPages\UseTriggerPage.xaml.cs">
+      <DependentUpon>UseTriggerPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Models\Workshop.cs" />
     <Compile Include="Models\WorkshopDataSource.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -129,6 +132,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="DemoPages\UnderstandSizes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DemoPages\UseTriggerPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
