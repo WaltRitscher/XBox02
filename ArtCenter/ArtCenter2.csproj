@@ -96,10 +96,6 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DemoPages\IsXboxDeviceTrigger.cs" />
-    <Compile Include="DemoPages\TriggerExamplePage.xaml.cs">
-      <DependentUpon>TriggerExamplePage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="DemoPages\UnderstandSizes.xaml.cs">
       <DependentUpon>UnderstandSizes.xaml</DependentUpon>
     </Compile>
@@ -125,10 +121,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="DemoPages\TriggerExamplePage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="DemoPages\UnderstandSizes.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
