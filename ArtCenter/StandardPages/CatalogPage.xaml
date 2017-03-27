@@ -37,6 +37,7 @@
                                    FontSize="13"
                                    FontWeight="SemiBold"
                                    Text='{Binding Title}'
+                                   MinHeight='35'
                                    TextWrapping='Wrap' />
                         <Grid Background="#ff666666">
                             <TextBlock Height="120"
