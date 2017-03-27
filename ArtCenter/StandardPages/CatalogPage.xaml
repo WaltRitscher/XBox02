@@ -6,53 +6,54 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="1*" />
-        </Grid.RowDefinitions>
-        <TextBlock FontSize="40"
-                   Foreground="Orange"
-                   Text="Catalog"
-                   TextAlignment="Center" />
+  <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="1*" />
+    </Grid.RowDefinitions>
+    <TextBlock FontSize="40"
+               Foreground="Orange"
+               Text="Catalog"
+               TextAlignment="Center" />
 
-        <GridView x:Name="gridView"
-                  Grid.Row="1"
-                  Margin="10,10,0,0"
-                  IsItemClickEnabled="True"
-                  ItemsSource="{Binding}"
-                  ItemClick='gridView_ItemClick' >
-            <GridView.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel Width="230"
-                                Margin="10"
-                                Background="#ff333333">
-                        <Image Height='180'
-                               Stretch='UniformToFill'
-                               Source='{Binding ImagePath}' />
-                        <TextBlock Margin="4,4,0,0"
-                                   HorizontalAlignment="Left"
-                                   VerticalAlignment="Bottom"
-                                   FontFamily="Segoe UI"
-                                   FontSize="13"
-                                   FontWeight="SemiBold"
-                                   Text='{Binding Title}'
-                                   TextWrapping='Wrap' />
-                        <Grid Background="#ff666666">
-                            <TextBlock Height="120"
-                                       MinHeight="80"
-                                       Margin="14,4,4,14"
-                                       HorizontalAlignment="Left"
-                                       VerticalAlignment="Bottom"
-                                       FontFamily="Segoe UI"
-                                       FontSize="11"
-                                       Text='{Binding Description}'
-                                       TextWrapping='Wrap'
-                                       TextTrimming='WordEllipsis' />
-                        </Grid>
-                    </StackPanel>
-                </DataTemplate>
-            </GridView.ItemTemplate>
-        </GridView>
-    </Grid>
+    <GridView x:Name="gridView"
+              Grid.Row="1"
+              Margin="10,10,0,0"
+              IsItemClickEnabled="True"
+              ItemsSource="{Binding}"
+              ItemClick='gridView_ItemClick' >
+      <GridView.ItemTemplate>
+        <DataTemplate>
+          <StackPanel Width="230"
+                      Margin="10"
+                      Background="#ff333333">
+            <Image Height='180'
+                   Stretch='UniformToFill'
+                   Source='{Binding ImagePath}' />
+            <TextBlock Margin="4,4,0,0"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Bottom"
+                       FontFamily="Segoe UI"
+                       FontSize="13"
+                       FontWeight="SemiBold"
+                       Text='{Binding Title}'
+                       MinHeight='35'
+                       TextWrapping='Wrap' />
+            <Grid Background="#ff666666">
+              <TextBlock Height="120"
+                         MinHeight="80"
+                         Margin="14,4,4,14"
+                         HorizontalAlignment="Left"
+                         VerticalAlignment="Bottom"
+                         FontFamily="Segoe UI"
+                         FontSize="11"
+                         Text='{Binding Description}'
+                         TextWrapping='Wrap'
+                         TextTrimming='WordEllipsis' />
+            </Grid>
+          </StackPanel>
+        </DataTemplate>
+      </GridView.ItemTemplate>
+    </GridView>
+  </Grid>
 </Page>
