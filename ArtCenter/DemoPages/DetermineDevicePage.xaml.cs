@@ -22,7 +22,7 @@ namespace ArtCenter.DemoPages {
   public sealed partial class DetermineDevicePage : Page {
     public DetermineDevicePage() {
       this.InitializeComponent();
-     
+      DeviceTextBlock.Text = Windows.System.Profile.AnalyticsInfo.VersionInfo.DeviceFamily;
     }
   }
 }
