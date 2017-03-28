@@ -28,6 +28,7 @@ namespace ArtCenter {
       this.InitializeComponent();
 			this.RequiresPointerMode = Windows.UI.Xaml.ApplicationRequiresPointerMode.WhenRequested;
 			this.Suspending += OnSuspending;
+      ElementSoundPlayer.State = ElementSoundPlayerState.On;
     }
 
     /// <summary>
