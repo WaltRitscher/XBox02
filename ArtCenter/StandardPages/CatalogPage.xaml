@@ -21,7 +21,7 @@
                   Margin="10,10,0,0"
                   IsItemClickEnabled="True"
                   ItemsSource="{Binding}"
-                  ItemClick='gridView_ItemClick'>
+                  ItemClick='gridView_ItemClick' >
             <GridView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Width="230"
@@ -37,6 +37,7 @@
                                    FontSize="13"
                                    FontWeight="SemiBold"
                                    Text='{Binding Title}'
+                                   MinHeight='35'
                                    TextWrapping='Wrap' />
                         <Grid Background="#ff666666">
                             <TextBlock Height="120"
