@@ -108,8 +108,8 @@
     <Compile Include="StandardPages\VideoPage.xaml.cs">
       <DependentUpon>VideoPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DemoPages\TabDirectionPage.xaml.cs">
-      <DependentUpon>TabDirectionPage.xaml</DependentUpon>
+    <Compile Include="DemoPages\AvailableSoundsPage.xaml.cs">
+      <DependentUpon>AvailableSoundsPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -142,7 +142,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="DemoPages\TabDirectionPage.xaml">
+    <Page Include="DemoPages\AvailableSoundsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
