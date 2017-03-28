@@ -12,7 +12,7 @@
                IsPaneOpen="False"
                OpenPaneLength="200">
         <FlyoutBase.AttachedFlyout>
-            <Flyout>
+            <Flyout ElementSoundMode="Off">
                 <StackPanel>
                     <TextBlock FontSize="40"
                                Text="Video Search" />
