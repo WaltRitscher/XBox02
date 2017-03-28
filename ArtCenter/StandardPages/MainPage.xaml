@@ -81,7 +81,7 @@
                                        Text="Demo 1" />
                         </StackPanel>
                     </ToggleButton>
-                    <ToggleButton x:Name="DemoTwoButton"
+                    <ToggleButton x:Name="DemoTwoButton" ElementSoundMode="Off" 
                                   HorizontalAlignment="Stretch"
                                   HorizontalContentAlignment="Left"
                                   Checked="DemoTwoButton_Checked"
