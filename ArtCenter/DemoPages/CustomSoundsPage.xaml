@@ -1,4 +1,4 @@
-﻿<Page x:Class="ArtCenter.AvailableSoundsPage"
+﻿<Page x:Class="ArtCenter.CustomSoundsPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:local="using:ArtCenter"
@@ -7,7 +7,7 @@
       mc:Ignorable="d">
 
     <Grid x:Name="MainGrid"
-          Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+          Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" >
         <Grid.RowDefinitions>
             <RowDefinition Height="auto" />
             <RowDefinition Height="1*" />
@@ -41,49 +41,50 @@
 
         <Button Grid.Row="1"
                 Grid.Column="0"
-                Content="Focus"
+                Content="Example"
                 Click="FocusButton_Click"
                 ElementSoundMode="Off" />
         <Button x:Name="ShowButton"
                 Grid.Row="1"
                 Grid.Column="1"
-                Content="Show"
+                Content="Example"
                 Click="ShowButton_Click"
                 ElementSoundMode="Off" />
         <Button x:Name="HideButton"
                 Grid.Row="1"
                 Grid.Column="2"
-                Content="Hide"
+                Content="Example"
                 Click="HideButton_Click"
                 ElementSoundMode="Off" />
 
         <Button x:Name="MoveNextButton"
                 Grid.Row="2"
                 Grid.Column="0"
-                Content="Move Next"
+                Content="Example"
                 Click="MoveNextButton_Click"
                 ElementSoundMode="Off" />
         <Button x:Name="MovePrevButton"
                 Grid.Row="2"
                 Grid.Column="1"
-                Content="Move Previous"
+                Content="Example"
                 Click="MovePrevButton_Click"
                 ElementSoundMode="Off" />
         <Button x:Name="GoBackButton"
                 Grid.Row="2"
                 Grid.Column="2"
-                Content="Go Back"
+                Content="Example"
                 Click="GoBackButton_Click"
                 ElementSoundMode="Off" />
 
         <Button x:Name="InvokeButton"
                 Grid.Row="3"
                 Grid.Column="1"
-                Content="Invoke"
+                Content="Example"
                 Click="InvokeButton_Click"
                 ElementSoundMode="Off" />
 
         <ComboBox DropDownOpened="ComboBox_DropDownOpened"
+                  DropDownClosed="ComboBox_DropDownClosed"
                   Grid.Row="4"
                   Grid.Column="1" HorizontalAlignment="Center"
                   ElementSoundMode="Off">
@@ -92,5 +93,8 @@
             <TextBlock Text="Design" />
             <TextBlock Text="Music" />
         </ComboBox>
+        <MediaPlayerElement x:Name="clickerPlayer"
+                            AutoPlay="False" Visibility="Collapsed"
+                            AreTransportControlsEnabled='True' />
     </Grid>
 </Page>

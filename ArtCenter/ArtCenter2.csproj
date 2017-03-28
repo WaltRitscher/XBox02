@@ -99,8 +99,8 @@
     <Compile Include="Models\Workshop.cs" />
     <Compile Include="Models\WorkshopDataSource.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="DemoPages\AvailableSoundsPage.xaml.cs">
-      <DependentUpon>AvailableSoundsPage.xaml</DependentUpon>
+    <Compile Include="DemoPages\CustomSoundsPage.xaml.cs">
+      <DependentUpon>CustomSoundsPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -112,6 +112,9 @@
     <Content Include="Assets\ControllerButtons.png" />
     <Content Include="Assets\OV_Splash.png" />
     <Content Include="Assets\OV_Splash2.png" />
+    <Content Include="Assets\Sounds\Clicker.mp3" />
+    <Content Include="Assets\Sounds\Droner.mp3" />
+    <Content Include="Assets\Sounds\Droner2.mp3" />
     <Content Include="Assets\Square310x310Logo.scale-100.png" />
     <Content Include="Assets\Square310x310Logo.scale-200.png" />
     <Content Include="Properties\Default.rd.xml" />
@@ -121,7 +124,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="DemoPages\AvailableSoundsPage.xaml">
+    <Page Include="DemoPages\CustomSoundsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

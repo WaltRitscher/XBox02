@@ -59,7 +59,7 @@ namespace ArtCenter {
         }
 
         // Place the frame in the current Window
-        Window.Current.Content = new AvailableSoundsPage();
+        Window.Current.Content = new CustomSoundsPage();
       }
 
       if (e.PrelaunchActivated == false)
