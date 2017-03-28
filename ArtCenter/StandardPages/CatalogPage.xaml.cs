@@ -18,6 +18,7 @@ namespace ArtCenter {
     private async void CatalogPage_Loaded(object sender, RoutedEventArgs e) {
       var dataSource = await WorkshopDataSource.CreateAsync();
       this.DataContext = dataSource.GetPopularWorkshops();
+
     }
 
     protected override void OnNavigatedTo(NavigationEventArgs e) {
