@@ -46,7 +46,7 @@
                 Grid.Column="0"
                 Content="▼"
                 Click="Button_Click" TabIndex="1"
-            Margin='114,35,113,34' />
+            />
         <Button Grid.Row="1"
                 Grid.Column="1"
                 Content="▶"
